@@ -3134,7 +3134,7 @@ input, select, textarea {
 /* Table */
 
 	.table-wrapper {
-		overflow-x: hidden;
+		overflow-x: auto;
 	}
 
 	table {
