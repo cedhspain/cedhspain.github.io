@@ -74,7 +74,26 @@
 			<section id="two" class="wrapper style3 fade-up">
 				<div class="inner">
 					<h2>Sobre el circuito</h2>
-					<p>¿Crees que puedes competir contra los mejores cara a cara? Gana puntos en los torneos locales tanto de tu región como otras y clasifica a grandes torneos donde podrás demostrarlo.</p>
+					<p>¿Crees que puedes competir contra los mejores cara a cara? Gana puntos en los torneos del circuito y clasifica al torneo invitacional donde se repartirá lo acumulado.</p>
+				<div>	
+					<h3  style="text-align:center;bottom-margin:0; ">Bote actualizado para la final</h3>
+					<div id="counter" class="counter" style="text-align:center;bottom-margin:0; ">0</div>
+
+					<script>
+						let upto = 0;
+						let counts = setInterval(updated, 100);
+				
+						function updated() {
+							let count = document.getElementById("counter");
+							count.innerHTML = ++upto;
+							if (upto === 24) {
+								clearInterval(counts);
+							}
+						}
+					</script>
+					<h3 style="text-align:center;font-weight:normal">Euros</h3>
+				<br>
+				</div>
 					<div class="features">
 						<section>
 							<span class="icon solid major fa-user"></span>
@@ -260,6 +279,6 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-
+		<script src="assets/js/countup.js"></script>
 	</body>
 </html>
