@@ -185,8 +185,13 @@ input, select, textarea {
 			color: inherit;
 			text-decoration: none;
 		}
-
-	h1 {
+	.counter {
+			color: #ffffff;
+			font-weight: bold;
+			line-height: 1.5;
+			text-align:center
+		}
+	h1, .counter {
 		font-size: 2.75em;
 	}
 
@@ -3135,11 +3140,13 @@ input, select, textarea {
 
 	.table-wrapper {
 		overflow-x: auto;
+		
 	}
 
 	table {
 		margin: 0 0 2em 2em;
 		width: 50%;
+		
 	}
 
 		table tbody tr {
@@ -3907,3 +3914,4 @@ input, select, textarea {
 			}
 
 		}
+
