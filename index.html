@@ -81,12 +81,12 @@
 
 					<script>
 						let upto = 0;
-						let counts = setInterval(updated, 100);
+						let counts = setInterval(updated, 300);
 				
 						function updated() {
 							let count = document.getElementById("counter");
 							count.innerHTML = ++upto;
-							if (upto === 102) {
+							if (upto === 119) {
 								clearInterval(counts);
 							}
 						}
