@@ -81,12 +81,12 @@
 
 					<script>
 						let upto = 0;
-						let counts = setInterval(updated, 10);
+						let counts = setInterval(updated, 5);
 				
 						function updated() {
 							let count = document.getElementById("counter");
 							count.innerHTML = ++upto;
-							if (upto === 1350) {
+							if (upto === 1515) {
 								clearInterval(counts);
 							}
 						}
@@ -282,6 +282,7 @@
 		<script src="assets/js/countup.js"></script>
 	</body>
 </html>
+
 
 
 
