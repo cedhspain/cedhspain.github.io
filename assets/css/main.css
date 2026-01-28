@@ -3144,8 +3144,8 @@ input, select, textarea {
 	}
 
 	table {
-		margin: 0 0 2em 2em;
-		width: 50%;
+		margin: 0 0 2em 0;
+		width: 100%;
 		
 	}
 
@@ -3915,3 +3915,78 @@ input, select, textarea {
 
 		}
 
+/* Estilos Responsive para la Tabla de Eventos */
+@media screen and (max-width: 736px) {
+    /* Forzar que la tabla ocupe todo el ancho */
+    .table-wrapper {
+        width: 100%;
+        overflow-x: hidden; /* Ya no necesitamos scroll */
+    }
+
+    /* Convertir elementos de tabla en bloques */
+    table.alt, table.alt thead, table.alt tbody, table.alt th, table.alt td, table.alt tr {
+        display: block;
+        width: 100%;
+    }
+
+    /* Ocultar la cabecera original (Comunes, Raros, etc) */
+    table.alt thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    /* Estilo de cada fila como si fuera una "Tarjeta" */
+    table.alt tbody tr {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        margin-bottom: 1.5em;
+        padding: 0;
+    }
+
+    /* Estilo de las celdas individuales */
+    table.alt td {
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        position: relative;
+        padding-left: 50% !important; /* Espacio para la etiqueta a la izquierda */
+        text-align: right; /* Valor a la derecha */
+        padding-top: 0.75em;
+        padding-bottom: 0.75em;
+    }
+
+    /* La etiqueta (label) que añadimos en el HTML */
+    table.alt td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1em;
+        top: 0.75em;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    /* Estilo especial para la primera celda (Ganador, Top 4...) */
+    table.alt td:first-child {
+        background-color: rgba(255, 255, 255, 0.15);
+        text-align: center;
+        padding-left: 0 !important;
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+    
+    /* Quitar la etiqueta de la primera celda porque es el título */
+    table.alt td:first-child:before {
+        content: none;
+    }
+    
+    /* Quitar borde a la última celda de la tarjeta */
+    table.alt td:last-child {
+        border-bottom: 0;
+    }
+}
